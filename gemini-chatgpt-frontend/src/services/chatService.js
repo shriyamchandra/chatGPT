@@ -20,7 +20,7 @@ console.log('User ID:', userId);
 
 const sendMessageToBackend = async (message) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/chat', { message, userId });
+        const response = await axios.post('https://chatgpt-1tmy.onrender.com/api/auth/chat', { message, userId });
         return response.data;  // Return the full response object from the backend
     } catch (error) {
         console.error('Error communicating with the backend:', error);
