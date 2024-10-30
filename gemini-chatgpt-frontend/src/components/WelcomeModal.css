@@ -1,0 +1,86 @@
+/* gemini-chatgpt-frontend/src/components/WelcomeModal.css */
+
+.welcome-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.welcome-modal {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    animation: slideDown 0.3s ease-out;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.welcome-modal h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.welcome-modal p {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.welcome-modal ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.welcome-modal code {
+    background-color: #e5e7eb;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+body.dark-mode .welcome-modal code {
+    background-color: #374151;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
